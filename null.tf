@@ -1,5 +1,10 @@
 resource "null_resource" "runner" {
   provisioner "local-exec" {
-    command = "ls"
+    command = 
+    <<EOT
+      "pwd"
+      "ls -a"
+      "cat terraform.tfplan
+    EOT
   }
 }
