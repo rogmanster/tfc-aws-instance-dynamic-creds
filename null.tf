@@ -3,7 +3,7 @@ resource "null_resource" "runner" {
     command = <<EOT
       pwd
       ls -a
-      cat terraform.tfplan
+      env
     EOT
   }
 }
